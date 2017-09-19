@@ -1,10 +1,32 @@
-import { Component } from '@angular/core';
+import { ChildComponent } from './child/child.component';
+import { Component, ViewChild, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent implements OnInit {
+
+  pName: string;
+
+  @ViewChild(ChildComponent) childView: ChildComponent;
+
+  ngOnInit() {
+  this.pName  = this.childView.cName;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
