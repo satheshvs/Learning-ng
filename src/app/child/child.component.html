@@ -1,4 +1,4 @@
 <h1>
     Child
 </h1>
-<input type="text" [(ngModel)]="cName" (change)>
+<input type="text" [(ngModel)]="cName" (input)="onChange(childTextbox.value)" #childTextbox>

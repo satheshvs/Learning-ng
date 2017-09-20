@@ -1,5 +1,5 @@
 import { ChildComponent } from './child/child.component';
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,26 +7,19 @@ import { Component, ViewChild, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
 
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
+  @Input() pName;
 
-  pName: string;
-
-  @ViewChild(ChildComponent) childView: ChildComponent;
-
-  ngOnInit() {
-  this.pName  = this.childView.cName;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
+  // @ViewChild(ChildComponent) childView: ChildComponent;
 
 }
+
+
+
+
+
+
+
+
+
+

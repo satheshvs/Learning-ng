@@ -2,4 +2,4 @@
     <h1>Parent</h1>
     <input type="text" [(ngModel)]="pName">
 </div>
-<app-child [cName]="pName"></app-child>
+<app-child [cName]="pName" (dectectedChangeInChildTextBox)="pName = $event"></app-child>
